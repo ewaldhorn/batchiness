@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Batchiness — batched Canvas2D</title>
+<style>
+  body { background: #111; color: #eee; font-family: sans-serif; text-align: center; }
+  #app { display: inline-block; margin-top: 2rem; }
+  canvas { border: 1px solid #444; }
+  a { color: #7fc4ff; }
+</style>
+</head>
+<body>
+<h1>Batchiness</h1>
+<p>One tree, one duck, drawn with real Canvas2D commands batched into a single WASM&harr;JS call per frame.</p>
+<div id="app"></div>
+<script src="./batchiness.js"></script>
+<script>
+  Batchiness.instantiate("example.wasm").catch((err) => {
+    console.error("Failed to load Batchiness app:", err);
+  });
+</script>
+</body>
+</html>
