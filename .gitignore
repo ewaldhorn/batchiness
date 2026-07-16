@@ -1,2 +1,3 @@
-docs/example.wasm
-docs/batchiness.js
+# Build artifacts are committed under docs/ so GitHub Pages can serve a
+# self-contained demo (docs/batchiness.js is copied from web/ by build.sh;
+# docs/example.wasm is the compiled example). Do not ignore them.
